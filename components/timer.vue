@@ -40,7 +40,7 @@ span {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: #767676;
+  color: #ffffff;
 }
 
 .time-part {
