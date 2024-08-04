@@ -1,19 +1,18 @@
 <template>
   <div id="app" v-cloak>
-    <h1>Orbitimer<span>.</span></h1>
-    <p>Informe um tempo maior que zero e inicie o temporizador.</p>
+    <img src="../public/images/illustration.svg" />
     <timer-setup v-if="!time" @set-time="setTime"></timer-setup>
-    <div v-else>
+    <div v-else style="margin-left: 58px">
       <timer :time="time"></timer>
       <div>
         <button v-if="!isRunning" @click="start">Iniciar</button>
-        <button v-if="isRunning" @click="stop">Parar</button>
+        <button v-if="isRunning" @click="stop">Pausar</button>
         <button @click="reset">Reiniciar</button>
       </div>
     </div>
-    <img src="../public/images/illustration.svg" />
   </div>
 </template>
+
 
 
   <script>
@@ -97,9 +96,7 @@ export default {
     Timer,
   },
   mounted() {
-    this.sound = new Audio(
-      "../public/audios/computer-space.mp3"
-    );
+    this.sound = new Audio("../public/audios/computer-space.mp3");
   },
 };
 </script>
@@ -114,19 +111,13 @@ export default {
 }
 
 img {
-  width: 16rem;
+  width: 24rem;
 }
 
 body {
   font-family: sans-serif;
   padding: 0;
   margin: 0;
-}
-
-#app {
-  padding: 10px;
-  margin: 0 auto;
-  max-width: 1000px;
 }
 
 input[type="number"] {
@@ -151,24 +142,24 @@ label {
 }
 
 button {
-  background-color: #6A40BF;
+  background-color: #3178c6;
   border-radius: 8px;
   border-style: none;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
   margin: 0;
   outline: none;
-  padding: 10px 16px;
+  padding: 10px 32px;
   text-align: center;
   transition: color 100ms;
   margin-right: 8px;
 }
 
 button:hover {
-  background-color: #805ec2;
+  background-color: #4791df;
 }
 </style>
